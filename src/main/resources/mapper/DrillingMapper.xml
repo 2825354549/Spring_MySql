@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.mysql.mapper.DrillingMapper">
+
+    <resultMap id="BaseResultMap" type="com.ly.mysql.domain.Drilling">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="md" column="MD" jdbcType="FLOAT"/>
+            <result property="wob" column="WOB" jdbcType="FLOAT"/>
+            <result property="sp" column="SP" jdbcType="FLOAT"/>
+            <result property="tq" column="TQ" jdbcType="FLOAT"/>
+            <result property="rs" column="RS" jdbcType="FLOAT"/>
+            <result property="mf" column="MF" jdbcType="FLOAT"/>
+            <result property="hl" column="HL" jdbcType="FLOAT"/>
+            <result property="tvd" column="TVD" jdbcType="FLOAT"/>
+            <result property="rop" column="ROP" jdbcType="FLOAT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,MD,WOB,SP,TQ,RS,MF,HL,TVD,ROP
+    </sql>
+
+    <select id="selectList" resultType="com.ly.mysql.domain.Drilling">
+        SELECT `MD`, `WOB`, `SP`, `TQ`, `RS`, `MF`, `HL`, `TVD`, `ROP`
+        FROM `drilling4` ORDER BY `id` LIMIT 32;
+    </select>
+</mapper>
+
+

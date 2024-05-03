@@ -1,0 +1,29 @@
+data111:
+  MD:
+    std: 862.88
+    mean: 1892.28
+  WOB:
+    std: 3.53
+    mean: 5.39
+  SP:
+    std: 4564.3
+    mean: 16750.58
+  TQ:
+    std: 4.78
+    mean: 10.82
+  RS:
+    std: 35.55
+    mean: 136.51
+  MF:
+    std: 1038.33
+    mean: 3267.38
+  HL:
+    std: 17.74
+    mean: 123.59
+  TVD:
+    std: 791.45
+    mean: 1810.23
+  ROP:
+    std: 15.52
+    mean: 26.22
+
