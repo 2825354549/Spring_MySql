@@ -169,6 +169,7 @@ public class PredictService{
     }
     public float[][] predict3() throws Exception {
         List<Drilling> drillingList = drillingMapper.selectList();
+//        drillingMapper.forEach(System.out::println);
 
         float[][][] tensorData = onnxTensorConverter.convertList(drillingList);
 //        System.out.println("modelPath:" + modelPath);

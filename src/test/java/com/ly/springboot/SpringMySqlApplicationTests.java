@@ -53,8 +53,8 @@ class SpringMySqlApplicationTests {
     public void testPredService() throws Exception {
         // 调用PredictService中的方法并断言结果是否符合预期
         // 这里可以根据具体情况编写测试逻辑
-//        List<Drilling> drillingMapper = predictService.getList();
-//        drillingMapper.forEach(System.out::println);
+        List<Drilling> drillingMapper = predictService.getList();
+        drillingMapper.forEach(System.out::println);
 //        var list2 = onr.convertList(drillingMapper);
 //		print3DArray(list2);
         OrtSession.Result output = predictService.predict2();

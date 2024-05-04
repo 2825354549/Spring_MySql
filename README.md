@@ -12,3 +12,19 @@ jdk17 java运行环境
 ## 注意事项
 修改application.yaml里面的配置即可
 数据处理需要的数据在data.properties里面
+构建容器需要修改dockfile里面的几个文件路径 jar包路径和模型路径
+
+## 项目结构
+.
+├── README.md
+├── dockfile
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── ly
+│   │   │           ├── SpringMySqlApplication.java
+│   │   │           ├── mysql
+│   │   │           ├── springboot
+│   │   └── resources

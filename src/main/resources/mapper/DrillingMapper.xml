@@ -22,8 +22,12 @@
     </sql>
 
     <select id="selectList" resultType="com.ly.mysql.domain.Drilling">
-        SELECT `MD`, `WOB`, `SP`, `TQ`, `RS`, `MF`, `HL`, `TVD`, `ROP`
-        FROM `drilling4` ORDER BY `id` LIMIT 32;
+        SELECT `MD`, `WOB`, `SP`, `TQ`, `RS`, `MF`, `HL`, `TVD`, `ROP` FROM (SELECT *
+                          FROM `drilling4`
+                          ORDER BY `id` DESC
+                              LIMIT 32
+                      ) AS sub
+        ORDER BY `id` ASC;
     </select>
 </mapper>
 

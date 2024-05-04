@@ -13,7 +13,7 @@ import lombok.Data;
 @TableName(value ="drilling4")
 @Data
 public class Drilling implements Serializable {
-//    private Integer id;
+    private Integer id;
 
     private Double md;
 
