@@ -6,6 +6,8 @@ server:
       encoding: utf-8
 
 spring:
+#  profiles:
+#    default: local
   datasource:
     username: root
     password: password
@@ -19,6 +21,8 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 
+model:
+  path: E:/SpringBootSystemV1.0/iInformer.onnx
 
 
 datas:

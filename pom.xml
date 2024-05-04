@@ -26,11 +26,6 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>3.0.3</version>
 		</dependency>
-<!--		redis依赖-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-redis</artifactId>-->
-<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
@@ -74,55 +69,20 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.33</version>
 		</dependency>
-<!--		Redis-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-redis</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-test</artifactId>-->
-<!--			<scope>test</scope>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>com.baomidou</groupId>-->
-<!--			<artifactId>mybatis-plus-generator</artifactId>-->
-<!--			<version>3.0.3</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.bytedeco</groupId>-->
-<!--			<artifactId>onnxruntime</artifactId>-->
-<!--			<version>1.16.3-1.5.10</version>-->
-<!--		</dependency>-->
-		<!-- https://mvnrepository.com/artifact/com.microsoft.onnxruntime/onnxruntime -->
 		<dependency>
 			<groupId>com.microsoft.onnxruntime</groupId>
 			<artifactId>onnxruntime</artifactId>
 			<version>1.17.3</version>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-configuration-processor</artifactId>-->
-<!--			<version>3.2.4</version>-->
-<!--		</dependency>-->
-
-		<!--		<dependency>-->
-<!--			<groupId>org.nd4j</groupId>-->
-<!--			<artifactId>nd4j-onnxruntime</artifactId>-->
-<!--			<version>1.0.0-M2.1</version>-->
-<!--		</dependency>-->
-
-
-
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>3.2.5</version>
+<!--				<version>3.2.5</version>-->
 				<configuration>
+					<mainClass>com.ly.SpringMySqlApplication</mainClass>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>

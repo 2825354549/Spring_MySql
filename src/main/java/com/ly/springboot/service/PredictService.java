@@ -4,14 +4,18 @@ import ai.onnxruntime.*;
 import com.ly.mysql.domain.Drilling;
 import com.ly.mysql.mapper.DrillingMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
+//@PropertySource("classpath:application.yaml")
 public class PredictService{
-
 //    private final DrillingMapper drillingMapper;
+    @Value("${model.path}")
+    private String modelPath;
 
 
     @Autowired
@@ -121,7 +125,6 @@ public class PredictService{
 
     }
 
-
     public float[][][] predict() throws Exception {
         List<Drilling> drillingList = drillingMapper.selectList();
         // 假设您已经在其他地方打印了drillingList，这里就不再重复打印
@@ -164,20 +167,21 @@ public class PredictService{
         float[][][] predTensorData = (float[][][]) tensorValue;
         return onnxTensorConverter.denormalizeTensor(predTensorData);
     }
-
     public float[][] predict3() throws Exception {
         List<Drilling> drillingList = drillingMapper.selectList();
-        // 假设您已经在其他地方打印了drillingList，这里就不再重复打印
 
         float[][][] tensorData = onnxTensorConverter.convertList(drillingList);
+//        System.out.println("modelPath:" + modelPath);
 
-        String modelPath = "src/main/resources/iInformer.onnx";
+//        String modelPath = "src/main/resources/iInformer.onnx";
+        //创建onnxruntime实例  创建配置类 （加入GPU） 创建会话实例
         try (OrtEnvironment environment = OrtEnvironment.getEnvironment();
              OrtSession.SessionOptions sessionOptions = new OrtSession.SessionOptions();
              OrtSession session = environment.createSession(modelPath, sessionOptions)) {
 
             OnnxTensor inputTensor = OnnxTensor.createTensor(environment, tensorData);
             HashMap<String, OnnxTensor> inputs = new HashMap<>();
+            //模型输入键集合 第一个
             String inputName = session.getInputInfo().keySet().iterator().next();
             inputs.put(inputName, inputTensor);
 

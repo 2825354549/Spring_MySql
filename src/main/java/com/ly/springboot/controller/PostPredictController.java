@@ -20,8 +20,18 @@ public class PostPredictController {
     private PredictService predictService;
 
     @GetMapping("/data")
-    public List<Drilling> getDrillingData() {
-        return predictService.getList();
+//    public List<Drilling> getDrillingData() {
+//        return predictService.getList();
+//    }
+    public float[][] getPredictedData() {
+        try {
+            // 调用predict3方法并返回预测数据
+            return predictService.predict3();
+        } catch (Exception e) {
+            // 异常处理逻辑，根据需要进行修改
+            e.printStackTrace();
+            return null; // 或者返回一个错误信息
+        }
     }
-
 }
+
