@@ -18,7 +18,6 @@ jdk17 java运行环境
 ├─README.md
 ├─dockfile
 ├─pom.xml
-├─src
 ├─logs
 ├─src
 │  ├─main
