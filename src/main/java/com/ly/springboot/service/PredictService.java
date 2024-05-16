@@ -17,7 +17,6 @@ public class PredictService{
     @Value("${model.path}")
     private String modelPath;
 
-
     @Autowired
     private DrillingMapper drillingMapper;
     @Autowired

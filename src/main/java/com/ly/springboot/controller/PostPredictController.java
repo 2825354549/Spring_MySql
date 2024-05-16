@@ -1,6 +1,5 @@
 package com.ly.springboot.controller;
 
-
 import com.ly.mysql.domain.Drilling;
 import com.ly.springboot.service.PredictService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/predict")
 public class PostPredictController {
+
 
     @Autowired
     private PredictService predictService;
