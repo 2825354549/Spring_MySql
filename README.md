@@ -1,7 +1,7 @@
 # 文档
 ## 项目地址
 https://github.com/2825354549/Spring_MySql
-##项目展示
+## 项目展示
 csdn：https://blog.csdn.net/m0_68676807/article/details/138440903
 ## 应用框架
 spring-boot  web框架
